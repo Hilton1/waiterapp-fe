@@ -34,4 +34,20 @@ export const ModalBody = styled.div`
       background: transparent;
     }
   }
+
+  .status-container {
+    margin-top: 32px;
+
+    small {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    div {
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
 `;

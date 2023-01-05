@@ -20,6 +20,14 @@ export function OrderModal({ visible }: OrderModalProps) {
             <img src={close} alt="Ícone de fechar" />
           </button>
         </header>
+
+        <div className="status-container">
+          <small>Status do Pedido</small>
+          <div>
+            <span>🕑</span>
+            <strong>Fila de espera</strong>
+          </div>
+        </div>
       </ModalBody>
     </Overlay>
   );
