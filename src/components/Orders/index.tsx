@@ -14,22 +14,26 @@ export function Orders() {
       });
   }, []);
 
+  const waiting = orders.filter((order) => order.status==='WAITING');
+  const in_production = orders.filter((order) => order.status==='IN_PRODUCTION');
+  const done = orders.filter((order) => order.status==='DONE');
+
   return (
     <Container>
       <OrdersBoard
         icon = "🕑"
         title = "Fila de espera"
-        orders = {orders}
+        orders = {waiting}
       />
       <OrdersBoard
         icon = "👨‍🍳"
         title = "Em preparação"
-        orders = {orders}
+        orders = {in_production}
       />
       <OrdersBoard
         icon = "✅"
         title = "Pronto!"
-        orders = {orders}
+        orders = {done}
       />
     </Container>
   );
